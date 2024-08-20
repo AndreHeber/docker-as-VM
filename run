@@ -1,7 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-# Start your application
-exec /usr/local/bin/myapp
-
-# Touch the watchdog file
-touch /var/run/myapp.touch
