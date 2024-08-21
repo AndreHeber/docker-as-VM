@@ -11,7 +11,9 @@ I want a docker image that behaves more like a VM:
 ## Tested
 
 - [x] Starting & Stopping services with `s6-rc start myapp` and `s6-rc stop myapp`
+- [x] Watchdog: Restart works, tested with `kill`
 - [x] `docker exec` into the container and run myapp manually, it uses the env vars of the shell
 - [x] Logging: `/var/log/myapp/current` is filled
 - [x] Logrotation: With `ps aufxww`, you can see that `s6-log -b -- n20 s1000000 T /var/log/myapp` is running, which means that it rotates when the file becomes 1MB, it keeps 20 files and with `T` prepends ISO 8601 timestamp to each line
 - [ ] Cron
+- [ ] Coredump
